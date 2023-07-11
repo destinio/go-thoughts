@@ -21,8 +21,17 @@ jobs:
       with:
         go-version: 1.19
 
-    - name: Build
-      run: go build -v ./...
-
     - name: Test
-      run: go test -v ./...
+      run: make test
+
+    - name: Build
+      run: make build-local
+
+    - name: Create artifact
+      uses: actions/upload-artifact@v2
+      with:
+      # Artifact name
+        name: t
+        # Destination path
+        path: ./t
+
