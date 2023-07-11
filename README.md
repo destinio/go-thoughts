@@ -3,6 +3,8 @@
 **Where you know, you know, that one thing**
 - Steve Jobs
 
+[![Go](https://github.com/destinio/go-thoughts/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/destinio/go-thoughts/actions/workflows/go.yml)
+
 ## Install
 
 ```bash
