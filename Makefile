@@ -26,3 +26,7 @@ clean:
 clean-local:
 	@echo cleaning $(APP_NAME)
 	@rm -f $(APP_NAME)
+
+test:
+	@echo testing $(APP_NAME)
+	@go test -v ./...
