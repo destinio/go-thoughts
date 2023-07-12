@@ -19,6 +19,12 @@ jobs:
       with:
         go-version: '^1.16'
 
+    - name: 📦 Installing Dependencies
+      run: make deps
+
+    - name: 🧪 Testing Application
+      run: make test
+
     - name: 🛠️ Building Application
       run: make build
 
