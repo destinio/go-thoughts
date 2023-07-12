@@ -4,7 +4,15 @@ GO_MAIN_FILE="cmd/main.go"
 default:
 	@echo "Please specify a target to make.
 
-build: clean
+test:
+	@echo testing $(APP_NAME)
+	@go test -v ./...
+
+deps:
+	@echo getting dependencies
+	@go mod download
+
+build: clean deps
 	@echo building $(APP_NAME) in $(HOME)/bin/$(APP_NAME)
 	@echo Creating Database in ${HOME}/thoughts/thoughts.csv
 
@@ -26,7 +34,3 @@ clean:
 clean-local:
 	@echo cleaning $(APP_NAME)
 	@rm -f $(APP_NAME)
-
-test:
-	@echo testing $(APP_NAME)
-	@go test -v ./...
